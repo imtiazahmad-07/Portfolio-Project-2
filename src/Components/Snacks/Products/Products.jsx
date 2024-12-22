@@ -1,4 +1,3 @@
-import React from "react";
 import img1 from "../Images/1.webp";
 import img2 from "../Images/2.webp";
 import img3 from "../Images/3.webp";

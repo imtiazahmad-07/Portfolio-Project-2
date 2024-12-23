@@ -11,7 +11,6 @@ const ProductItems = () => {
   return (
     <Box sx={{ flexGrow: 1, marginTop: "40px" }}>
       <Grid container spacing={3} columns={12}>
-        {/* Accordion Section (Left side) */}
         <Grid item xs={12} md={3} sx={{ maxWidth: "250px" }}>
           <Box>
             <FilteredProducts />
@@ -29,6 +28,10 @@ const ProductItems = () => {
                     padding: "20px",
                     borderRadius: "10px",
                     boxShadow: "0px 1px 5px rgba(0, 0, 0, 0.1)",
+                    ":hover": {
+                      boxShadow: 10, 
+                      transition: "transform 0.3s, box-shadow 0.3s", 
+                    },
                   }}
                 >
                   <Link
@@ -39,7 +42,7 @@ const ProductItems = () => {
                       src={product.imageUrl}
                       alt={product.name}
                       style={{
-                        width: "100%", // Make image full width of the container
+                        width: "100%", 
                         height: "auto",
                         borderRadius: "8px",
                       }}
@@ -77,13 +80,13 @@ const ProductItems = () => {
                         color: "white",
                         textTransform: "capitalize",
                         borderRadius: "10px",
-                        padding: "4px 10px", // Adjust padding for smaller size
-                        fontSize: "0.875rem", // Set font size to small (default for small buttons)
-                        height: "32px", // Adjust the height if needed
+                        padding: "4px 10px", 
+                        fontSize: "0.875rem", 
+                        height: "32px", 
                       }}
                     >
                       <ShoppingBag size={20} />
-                      <Typography variant="body1" sx={{margin:"10px"}}>
+                      <Typography variant="body1" sx={{ margin: "10px" }}>
                         Cart
                       </Typography>
                     </Button>

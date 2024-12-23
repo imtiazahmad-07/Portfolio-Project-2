@@ -17,16 +17,15 @@ const BakeryProductDetail = () => {
   return (
     <Box sx={{ padding: "20px" }}>
       <Grid container spacing={3} sx={{ display: "flex", alignItems: "center" }}>
-        {/* Image on left side */}
         <Grid item xs={12} md={6} sx={{ display: "flex", justifyContent: "center" }}>
           <img
             src={product.imageUrl}
             alt={product.name}
-            style={{ width: "100%", maxWidth: "400px", height: "auto", borderRadius: "8px" }}
+            style={{ width: "100%", maxWidth: "400px", height: "auto", borderRadius: "8px",  paddingTop:"20px"}}
           />
         </Grid>
-        <Grid item xs={12} md={6} sx={{ padding: "20px" }}>
-          <Typography variant="h4" sx={{ fontWeight: 600 }}>
+        <Grid item xs={12} md={6} sx={{ marginTop: "100px" }}>
+          <Typography variant="h4" sx={{ fontWeight: 100 }}>
             {product.name}
           </Typography>
           <Typography variant="h6" color="textSecondary" sx={{ marginTop: "10px" }}>
@@ -36,10 +35,10 @@ const BakeryProductDetail = () => {
             {product.description}
           </Typography>
           <Typography variant="h6" sx={{ marginTop: "20px", fontWeight: "bold" }}>
-            Price: ${product.price}
+            Price: {product.price}
           </Typography>
 
-          {/* Add to Cart button */}
+          <Box sx={{display:'flex'}}>
           <Button
             variant="contained"
             sx={{
@@ -49,11 +48,29 @@ const BakeryProductDetail = () => {
               textTransform: "capitalize",
               display: "flex",
               alignItems: "center",
+              padding:"15px 60px"
             }}
           >
             <ShoppingCart className="me-2" />
-            Add to Cart
+            <Typography sx={{marginLeft:'20px '}}> Add to Cart</Typography>
           </Button>
+          <Button
+            variant="contained"
+            sx={{
+              marginTop: 2,
+              background:"white",
+              color:'grey',
+              textTransform: "capitalize",
+              display: "flex",
+              alignItems: "center",
+              padding:"15px 60px",
+              marginLeft:"100px",
+            }}
+          >
+            <ShoppingCart />
+            <Typography sx={{marginLeft:'20px '}}> 50 P'cs</Typography>
+          </Button>
+          </Box>
         </Grid>
       </Grid>
     </Box>

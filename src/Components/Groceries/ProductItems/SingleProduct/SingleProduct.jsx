@@ -2,37 +2,44 @@ import * as React from "react";
 import { useParams } from "react-router-dom";
 import { products } from "../Productdetails"; 
 import Box from "@mui/material/Box";
-import Grid from "@mui/material/Grid"; 
+import Grid from "@mui/material/Grid";
 import { Button, Typography } from "@mui/material";
 import { ShoppingCart } from "lucide-react";
 
 const SingleProduct = () => {
-  const { id } = useParams(); 
+  const { id } = useParams();
   const product = products.find((prod) => prod.id === parseInt(id));
 
   if (!product) {
-    return <Typography variant="h6">Product not found</Typography>; 
+    return <Typography variant="h6">Product not found</Typography>;
   }
 
   return (
-    <Box >
-      <Grid container spacing={3}>
-        <Grid item xs={12} md={6}>
+    <Box sx={{ padding: "20px" }}>
+      <Grid container spacing={3} sx={{ display: "flex", alignItems: "center" }}>
+        <Grid item xs={12} md={6} sx={{ display: "flex", justifyContent: "center" }}>
           <img
-            src={product.imageUrl} 
+            src={product.imageUrl}
             alt={product.name}
-            style={{ width: "70%" }}
+            style={{
+              width: "100%", 
+              maxWidth: "400px", 
+              height: "auto",
+              borderRadius: "8px",
+            }}
           />
         </Grid>
-        <Grid item xs={12} md={6} sx={{ margin: "10px" }}>
-          <Typography variant="h4">{product.name}</Typography>
-          <Typography variant="h6" color="textSecondary">
+        <Grid item xs={12} md={6} sx={{ padding: "20px" }}>
+          <Typography variant="h4" sx={{ fontWeight: 600 }}>
+            {product.name}
+          </Typography>
+          <Typography variant="h6" color="textSecondary" sx={{ marginTop: "10px" }}>
             {product.weight}
           </Typography>
-          <Typography variant="body1" color="textSecondary">
+          <Typography variant="body1" color="textSecondary" sx={{ marginTop: "10px" }}>
             {product.description}
           </Typography>
-          <Typography variant="h6" sx={{ marginTop: 2 }}>
+          <Typography variant="h6" sx={{ marginTop: "20px", fontWeight: "bold" }}>
             Price: ${product.price}
           </Typography>
           <Button
@@ -42,6 +49,8 @@ const SingleProduct = () => {
               backgroundColor: "#009F7F",
               color: "white",
               textTransform: "capitalize",
+              display: "flex",
+              alignItems: "center",
             }}
           >
             <ShoppingCart className="me-2" />

@@ -5,7 +5,7 @@ import Typography from "@mui/material/Typography";
 import { FaSearch } from "react-icons/fa";
 import ImageCarousel from "./ImageCarousel/ImageCarousel";
 import Cart from "../Cart/Cart";
-import ProductItems from "./ProductItems/ProcuctItems";
+import ProductItems from "./ProductItems/ProductItems";
 import CartDrawer from "../Cart/CartDrawer";
 import Button from "@mui/material/Button";
 

@@ -8,7 +8,6 @@ import { ShoppingBag } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const ProductItems = () => {
-
   return (
     <Box sx={{ flexGrow: 1, marginTop: "40px" }}>
       <Grid container spacing={3} columns={12}>

@@ -1,8 +1,8 @@
 import * as React from "react";
 import { useParams } from "react-router-dom";
-import { products } from "../Productdetails"; // Assuming your product data is here
+import { products } from "../Productdetails"; 
 import Box from "@mui/material/Box";
-import Grid from "@mui/material/Grid"; // Use Grid (not Grid2)
+import Grid from "@mui/material/Grid"; 
 import { Button, Typography } from "@mui/material";
 import { ShoppingCart } from "lucide-react";
 

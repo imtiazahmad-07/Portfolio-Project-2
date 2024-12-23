@@ -1,7 +1,6 @@
 import * as React from "react";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { Box, Accordion, AccordionSummary, AccordionDetails, Typography } from "@mui/material";
-
 const FilteredProducts = () => {
   const [expanded, setExpanded] = React.useState(false);
 

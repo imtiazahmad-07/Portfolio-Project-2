@@ -28,7 +28,7 @@ import img27 from "../Images/27.webp";
 import img28 from "../Images/28.webp";
 import img29 from "../Images/29.webp";
 
-export const Products = () => [
+export const productData  = () => [
   {
     id: 1,
     name: "Belmont Custard Cream",

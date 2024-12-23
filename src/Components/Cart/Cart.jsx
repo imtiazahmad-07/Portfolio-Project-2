@@ -16,13 +16,12 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 }));
 
 export default function Cart() {
-  const [item, setItem] = React.useState(0);
   return (
     <IconButton aria-label="cart">
       <ShoppingCart color="white" />
       <StyledBadge badgeContent={4}></StyledBadge> 
       <Typography variant="body1" color="white" marginLeft={"10px"}>
-        {item} Item
+         Items
       </Typography>
     </IconButton>
   );

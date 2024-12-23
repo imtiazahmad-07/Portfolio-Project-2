@@ -4,6 +4,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./Components/Layout/Layout";  // Import the layout that includes Navbar
 import Groceries from "./Components/Groceries/Groceries";
 import SingleProduct from "./Components/Groceries/ProductItems/SingleProduct/SingleProduct.jsx";
+import BakeryProduct from "./Components/Bakery/BakeryProduct/BakeryProduct.jsx";
+import BakeryProductDetail from "./Components/Bakery/BakeryProductDetail/BakeryProductDetail.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -18,6 +20,14 @@ const router = createBrowserRouter([
         path: "product-detail/:id",
         element: <SingleProduct/>,  
       },
+      {
+        path:"bakery",
+        element: <BakeryProduct/>
+      },
+      {
+        path:"bakery/bakery-product-detail/:id",
+        element:<BakeryProductDetail/>
+      }
     ],
   },
 ]);

@@ -1,5 +1,5 @@
 import { Box, Button, Grid, Grid2, TextField, Typography } from "@mui/material";
-import React, { useState } from "react";
+import React from "react";
 import { FaSearch } from "react-icons/fa";
 import img from "../BakeryProducts/BakeryImages/bg.webp";
 import ProductCard from "../ProductCard.jsx/ProductCard";

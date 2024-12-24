@@ -4,6 +4,7 @@ import { styled } from "@mui/material/styles";
 import IconButton from "@mui/material/IconButton";
 import { ShoppingCart } from "lucide-react";
 import { Typography } from "@mui/material";
+import { useSelector } from "react-redux";
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
   "& .MuiBadge-badge": {
@@ -16,12 +17,15 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 }));
 
 export default function Cart() {
+  const count = useSelector((state) => state.products.value); 
+  console.log("Cart Count:", count);
+
   return (
     <IconButton aria-label="cart">
       <ShoppingCart color="white" />
-      <StyledBadge badgeContent={4}></StyledBadge> 
+      <StyledBadge badgeContent={count > 0 ? count : null} />
       <Typography variant="body1" color="white" marginLeft={"10px"}>
-         Items
+        Items
       </Typography>
     </IconButton>
   );

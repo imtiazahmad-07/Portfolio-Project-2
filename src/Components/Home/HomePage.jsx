@@ -15,10 +15,6 @@ const HomePage = () => {
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);
   };
-  
-
-
-  
   return (
     <div>
       <Box

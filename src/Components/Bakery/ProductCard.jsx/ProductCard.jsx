@@ -5,8 +5,11 @@ import { Button, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 import { Bakeryproducts } from "../BakeryProducts/BakeryProducts";
 import { Add } from "@mui/icons-material";
+import { useDispatch } from "react-redux";
+import { addProduct } from "../../../Slices/products/productsSlice";
 
 const ProductCard = () => {
+  const dispatch = useDispatch();
   return (
     <Box sx={{ flexGrow: 1, marginTop: "40px" }}>
       <Grid item xs={12} md={9}>
@@ -20,34 +23,33 @@ const ProductCard = () => {
                   borderRadius: "10px",
                   ":hover": {
                     transform: "translateY(-10px)",
-                    boxShadow: 10, 
-                    transition: "transform 0.3s, box-shadow 0.3s", 
+                    boxShadow: 10,
+                    transition: "transform 0.3s, box-shadow 0.3s",
                   },
-                  boxShadow:"1px 1px 10px grey"
+                  boxShadow: "1px 1px 10px grey",
                 }}
-                
               >
+                <Button
+                  variant="contained"
+                  size="small"
+                  sx={{
+                    background: "white",
+                    color: "black",
+                    borderRadius: "10px",
+                    float: "inline-end",
+                    "&:hover": {
+                      backgroundColor: "#007F5F",
+                      color: "white",
+                    },
+                  }}
+                  onClick={() => dispatch(addProduct(product))}
+                >
+                  <Add size={20} />
+                </Button>
                 <Link
                   to={`/bakery/bakery-product-detail/${product.id}`}
                   style={{ textDecoration: "none" }}
                 >
-                  <Button
-                    variant="contained"
-                    size="small"
-                    sx={{
-                      background: "white",
-                      color: "black",
-                      borderRadius: "10px",
-                      float: "inline-end",
-                      "&:hover": {
-                        backgroundColor: "#007F5F",
-                        color: "white",
-                      },
-                    }}
-                  >
-                    <Add size={20} />
-                  </Button>
-
                   <img
                     src={product.imageUrl}
                     alt={product.name}

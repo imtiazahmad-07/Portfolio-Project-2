@@ -5,8 +5,8 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import { BriefcaseBusiness, Brush, Shirt } from "lucide-react";
 import CookieIcon from "@mui/icons-material/Cookie";
-import AppleIcon from '@mui/icons-material/Apple';
-import EventSeatIcon from '@mui/icons-material/EventSeat';
+import AppleIcon from "@mui/icons-material/Apple";
+import EventSeatIcon from "@mui/icons-material/EventSeat";
 import { Link } from "react-router-dom";
 import { Typography } from "@mui/material";
 
@@ -37,8 +37,16 @@ export default function GroceryMenu() {
             value="Grocery"
           >
             <Link to={"/"} style={{ textDecoration: "none" }}>
-              <Typography sx={{ color: "#009F7F" }}>
-                <AppleIcon /> Grocery
+              <Typography
+                sx={{
+                  color: "#009F7F",
+                  textDecoration: "none",
+                  display: "flex",
+                  gap: "10px",
+                }}
+              >
+                <AppleIcon />
+                <Typography>Grocery</Typography>
               </Typography>
             </Link>
           </MenuItem>
@@ -50,7 +58,6 @@ export default function GroceryMenu() {
                   textDecoration: "none",
                   display: "flex",
                   gap: "10px",
-                 
                 }}
               >
                 <CookieIcon />
@@ -58,36 +65,68 @@ export default function GroceryMenu() {
               </Typography>
             </Link>
           </MenuItem>
-          <MenuItem
-            sx={{ display: "flex", gap: "10px", color: "#009F7F" }}
-            value="Makeup"
-          >
-            <Brush /> Makeup
+          <MenuItem value="Makeup">
+            <Typography
+              sx={{
+                color: "#009F7F",
+                textDecoration: "none",
+                display: "flex",
+                gap: "10px",
+              }}
+            >
+              <Brush />
+              <Typography>Makeup</Typography>
+            </Typography>
           </MenuItem>
-          <MenuItem
-            sx={{ display: "flex", gap: "10px", color: "#009F7F" }}
-            value="Bags"
-          >
-            <BriefcaseBusiness /> Bags
+          <MenuItem value="Bags">
+            <Typography
+              sx={{
+                color: "#009F7F",
+                textDecoration: "none",
+                display: "flex",
+                gap: "10px",
+              }}
+            >
+              <BriefcaseBusiness />
+              <Typography>Bags</Typography>
+            </Typography>
           </MenuItem>
-          <MenuItem
-            sx={{ display: "flex", gap: "10px", color: "#009F7F" }}
-            value="Clothing"
-          >
-            <Shirt /> Clothing
+          <MenuItem value="Clothing">
+            <Typography
+              sx={{
+                color: "#009F7F",
+                textDecoration: "none",
+                display: "flex",
+                gap: "10px",
+              }}
+            >
+              <Shirt /> <Typography>Clothing</Typography>
+            </Typography>
           </MenuItem>
-          <MenuItem
-            sx={{ display: "flex", gap: "10px", color: "#009F7F" }}
-            value="Furniture"
-          >
-            <EventSeatIcon /> Furniture
+          <MenuItem value="Furniture">
+            <Typography
+              sx={{
+                color: "#009F7F",
+                textDecoration: "none",
+                display: "flex",
+                gap: "10px",
+              }}
+            >
+              <EventSeatIcon /> <Typography>Furniture</Typography>
+            </Typography>
           </MenuItem>
-          <MenuItem
-            sx={{ display: "flex", gap: "10px", color: "#009F7F" }}
-            value="DailyNeeds"
-          >
-            <AppleIcon />
-            Daily Needs
+          <MenuItem value="DailyNeeds">
+            <Typography
+              sx={{
+                color: "#009F7F",
+                textDecoration: "none",
+                display: "flex",
+                gap: "10px",
+              }}
+            >
+              <AppleIcon />
+              <Typography>Daily Needs</Typography>
+            </Typography>
           </MenuItem>
         </Select>
       </FormControl>

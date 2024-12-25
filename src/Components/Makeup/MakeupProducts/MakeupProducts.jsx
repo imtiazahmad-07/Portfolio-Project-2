@@ -74,12 +74,14 @@ const MakeupProducts = () => {
                         {product.name}
                       </Typography>
                     </Link>
-                    <p className="text-secondary fw-lighter">
-                      {product.weight}
-                    </p>
-                    <del className="text-secondary fw-lighter">
+                    < Typography  sx={{color:'grey', marginTop:1, marginBottom:1}}>
+                      {product.pieces}
+                    </ Typography >
+                    <Typography sx={{color:"grey", fontSize:'13px'}}>
+                    <del>
                       {product.prevPrice}
                     </del>
+                    </Typography>
                     <Box
                       sx={{
                         color: "#009F7F",
@@ -88,7 +90,7 @@ const MakeupProducts = () => {
                         marginTop: "10px",
                       }}
                     >
-                      <p className="text-success fw-bold">{product.price}</p>
+                      <Typography sx={{marginTop:'8px', fontWeight:'bold'}}>{product.price}</Typography>
                       <Button
                         size="small"
                         sx={{

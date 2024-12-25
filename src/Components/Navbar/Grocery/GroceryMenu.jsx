@@ -3,14 +3,10 @@ import Box from "@mui/material/Box";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
-import {
-  Apple,
-  Armchair,
-  BriefcaseBusiness,
-  Brush,
-  Cookie,
-  Shirt,
-} from "lucide-react";
+import { BriefcaseBusiness, Brush, Shirt } from "lucide-react";
+import CookieIcon from "@mui/icons-material/Cookie";
+import AppleIcon from '@mui/icons-material/Apple';
+import EventSeatIcon from '@mui/icons-material/EventSeat';
 import { Link } from "react-router-dom";
 import { Typography } from "@mui/material";
 
@@ -25,7 +21,7 @@ export default function GroceryMenu() {
     <Box sx={{ width: "170px" }}>
       <FormControl sx={{ width: "150px" }}>
         <Select
-          sx={{ color: "#009F7F" }}
+          sx={{ color: "red" }}
           labelId="demo-simple-select-label"
           id="demo-simple-select"
           value={item}
@@ -40,16 +36,25 @@ export default function GroceryMenu() {
             }}
             value="Grocery"
           >
-            <Link to={"/"} style={{ textDecoration: "none" }} >
-              <Typography sx={{ color: "#009F7F"}}>
-                <Apple /> Grocery
+            <Link to={"/"} style={{ textDecoration: "none" }}>
+              <Typography sx={{ color: "#009F7F" }}>
+                <AppleIcon /> Grocery
               </Typography>
             </Link>
           </MenuItem>
-          <MenuItem sx={{ display: "flex", gap: "10px" }} value="Bakery">
+          <MenuItem value="Bakery">
             <Link to={"bakery"} style={{ textDecoration: "none" }}>
-              <Typography sx={{ color: "#009F7F", textDecoration: "none" }}>
-                <Cookie /> Bakery
+              <Typography
+                sx={{
+                  color: "#009F7F",
+                  textDecoration: "none",
+                  display: "flex",
+                  gap: "10px",
+                 
+                }}
+              >
+                <CookieIcon />
+                <Typography> Bakery</Typography>
               </Typography>
             </Link>
           </MenuItem>
@@ -57,36 +62,31 @@ export default function GroceryMenu() {
             sx={{ display: "flex", gap: "10px", color: "#009F7F" }}
             value="Makeup"
           >
-            {" "}
             <Brush /> Makeup
           </MenuItem>
           <MenuItem
             sx={{ display: "flex", gap: "10px", color: "#009F7F" }}
             value="Bags"
           >
-            {" "}
             <BriefcaseBusiness /> Bags
           </MenuItem>
           <MenuItem
             sx={{ display: "flex", gap: "10px", color: "#009F7F" }}
             value="Clothing"
           >
-            {" "}
             <Shirt /> Clothing
           </MenuItem>
           <MenuItem
             sx={{ display: "flex", gap: "10px", color: "#009F7F" }}
             value="Furniture"
           >
-            {" "}
-            <Armchair /> Furniture
+            <EventSeatIcon /> Furniture
           </MenuItem>
           <MenuItem
             sx={{ display: "flex", gap: "10px", color: "#009F7F" }}
             value="DailyNeeds"
           >
-            {" "}
-            <Apple />
+            <AppleIcon />
             Daily Needs
           </MenuItem>
         </Select>

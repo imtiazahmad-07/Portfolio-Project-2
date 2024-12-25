@@ -5,12 +5,9 @@ import { Outlet } from "react-router-dom";
 const Layout = () => {
   return (
     <div>
-      {/* Navbar stays fixed or sticky at the top */}
       <Navbar />
-      
-      {/* Routed content will go here */}
-      <div > {/* Adjust based on your Navbar height */}
-        <Outlet />  {/* This renders your routes like ProductDetail */}
+      <div > 
+        <Outlet /> 
       </div>
     </div>
   );

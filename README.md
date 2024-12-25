@@ -1,4 +1,4 @@
-#PickBazar React eCommerce Website
+# PickBazar React eCommerce Website
 
 
 # Getting Started with Create React App

@@ -116,7 +116,7 @@ export const ProductsDetails = [
       "Our silky, lightunit powder sets makeup for longer wear while providing a veil of perfecting luminosity and a finish so natural they’ll think you were Born This Way.",
     prevPrice: "$5.00",
     price: "$4.00",
-    category: "Vegetables",
+    category: "Face Powder",
   },
   {
     id: 9,

@@ -9,6 +9,8 @@ import { store } from "./store.js";
 import "react-toastify/dist/ReactToastify.css";
 import HomePage from "./Components/Home/HomePage.jsx";
 import SingleProduct from "./Components/Home/ProductItems/SingleProduct/SingleProduct.jsx";
+import Makeup from "./Components/Makeup/Makeup.jsx";
+import UniqueProduct from "./Components/Makeup/UniqueProduct/UniqueProduct.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -31,6 +33,14 @@ const router = createBrowserRouter([
         path: "bakery/bakery-product-detail/:id",
         element: <BakeryProductDetail />,
       },
+      {
+        path:"makeup-products",
+        element:<Makeup/>
+      },
+      {
+        path:"makeup-products/makeup-product-detail/:id",
+        element:<UniqueProduct/>
+      }
     ],
   },
 ]);

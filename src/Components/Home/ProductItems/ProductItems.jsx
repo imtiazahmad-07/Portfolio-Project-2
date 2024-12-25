@@ -4,7 +4,7 @@ import FilteredProducts from "./FilteredProducts/FilteredProducts";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import { Button, Typography } from "@mui/material";
-import { ShoppingBag } from "lucide-react";
+import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { addProduct } from "../../../Slices/products/productsSlice";
@@ -89,20 +89,23 @@ const ProductItems = () => {
                     >
                       <p className="text-success fw-bold">{product.price}</p>
                       <Button
-                        variant="contained"
                         size="small"
                         sx={{
-                          backgroundColor: "#009F7F",
-                          color: "white",
+                          color:"#009F7F",
                           textTransform: "capitalize",
-                          borderRadius: "10px",
+                          borderRadius: "50px",
                           padding: "4px 10px",
                           fontSize: "0.875rem",
                           height: "32px",
+                          ":hover": {
+                            backgroundColor: "#009F7F",
+                            color: "white",
+                          },
                         }}
+
                         onClick={() => dispatch(addProduct(product))}
                       >
-                        <ShoppingBag size={20} />
+                        <BusinessCenterIcon  size={20} />
                         <Typography variant="body1" sx={{ margin: "10px" }}>
                           Cart
                         </Typography>

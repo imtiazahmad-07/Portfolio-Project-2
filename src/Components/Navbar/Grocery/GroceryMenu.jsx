@@ -66,6 +66,7 @@ export default function GroceryMenu() {
             </Link>
           </MenuItem>
           <MenuItem value="Makeup">
+          <Link to={"makeup-products"} style={{ textDecoration: "none" }}>
             <Typography
               sx={{
                 color: "#009F7F",
@@ -77,6 +78,7 @@ export default function GroceryMenu() {
               <Brush />
               <Typography>Makeup</Typography>
             </Typography>
+          </Link>
           </MenuItem>
           <MenuItem value="Bags">
             <Typography

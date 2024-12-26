@@ -96,6 +96,7 @@ export default function GroceryMenu() {
             </Link>
           </MenuItem>
           <MenuItem value="Clothing">
+          <Link to={'clothing'} style={{textDecoration:'none'}}>
             <Typography
               sx={{
                 color: "#009F7F",
@@ -106,6 +107,7 @@ export default function GroceryMenu() {
             >
               <Shirt /> <Typography>Clothing</Typography>
             </Typography>
+            </Link>
           </MenuItem>
           <MenuItem value="Furniture">
             <Typography

@@ -15,6 +15,8 @@ import BagsProduct from "./Components/Bags/BagsProduct/BagsProduct.jsx";
 import BagsProductDetail from "./Components/Bags/BagsProductDetail/BagsProductDetail.jsx";
 import ClothesCards from "./Components/Cllothing/ClothesCard/ClothesCards.jsx";
 import ClothProductDetail from "./Components/Cllothing/ClothProductDetail/ClothProductDetail.jsx";
+import HeroSection from "./Components/Furniture/HeroSection/HeroSection.jsx";
+import EachProduct from "./Components/Furniture/EachProduct/EachProduct.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -60,6 +62,14 @@ const router = createBrowserRouter([
       {
         path:"clothing/product-detail/:id",
         element:<ClothProductDetail/>
+      },
+      {
+        path:"furniture",
+        element:<HeroSection/>
+      },
+      {
+        path:"furniture/product-detail/:id",
+        element:<EachProduct/>
       }
     ],
   },

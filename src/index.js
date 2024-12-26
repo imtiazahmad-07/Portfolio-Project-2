@@ -11,6 +11,8 @@ import HomePage from "./Components/Home/HomePage.jsx";
 import SingleProduct from "./Components/Home/ProductItems/SingleProduct/SingleProduct.jsx";
 import Makeup from "./Components/Makeup/Makeup.jsx";
 import UniqueProduct from "./Components/Makeup/UniqueProduct/UniqueProduct.jsx";
+import BagsProduct from "./Components/Bags/BagsProduct/BagsProduct.jsx";
+import BagsProductDetail from "./Components/Bags/BagsProductDetail/BagsProductDetail.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -40,6 +42,14 @@ const router = createBrowserRouter([
       {
         path:"makeup-products/makeup-product-detail/:id",
         element:<UniqueProduct/>
+      },
+      {
+        path:"bags",
+        element:<BagsProduct/>
+      },
+      {
+        path:"bags/product-detail/:id",
+        element:<BagsProductDetail/>
       }
     ],
   },

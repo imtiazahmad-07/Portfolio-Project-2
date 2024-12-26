@@ -9,7 +9,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { addProduct } from "../../../Slices/products/productsSlice";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import BagsCategories from "../BagsCategories/BagsCategories";
+import BagsCategories from "../../Cllothing/ClothesCategories/ClothesCategories";
 
 const BagProductCard = () => {
   const dispatch = useDispatch();

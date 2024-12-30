@@ -119,7 +119,7 @@ export default function Navbar() {
 
       {/* Drawer for small screens */}
       <Drawer
-        anchor="left"
+        anchor="right"
         open={drawerOpen}
         onClose={handleDrawerToggle}
         sx={{

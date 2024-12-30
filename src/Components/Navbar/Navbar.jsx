@@ -6,8 +6,18 @@ import Typography from "@mui/material/Typography";
 import logo from "./Assets/Logo-new.webp";
 import GroceryMenu from "./Grocery/GroceryMenu";
 import PagesMenu from "./PagesMenu/PagesMenu";
-import RegisterModal from './Forms/RegisterModal';
-import { Button, IconButton, Drawer, List, ListItem, ListItemText, useMediaQuery, useTheme, Grid } from "@mui/material";
+import RegisterModal from "./Forms/RegisterModal";
+import {
+  Button,
+  IconButton,
+  Drawer,
+  List,
+  ListItem,
+  ListItemText,
+  useMediaQuery,
+  useTheme,
+  Grid,
+} from "@mui/material";
 import JoinModal from "./Forms/JoinModal";
 import MenuIcon from "@mui/icons-material/Menu";
 
@@ -21,29 +31,58 @@ export default function Navbar() {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="fixed" color="transparent" elevation={0} sx={{ backgroundColor: "#fff" }}>
+      <AppBar
+        position="fixed"
+        color="transparent"
+        elevation={0}
+        sx={{ backgroundColor: "#fff" }}
+      >
         <Toolbar>
           {/* Logo section */}
           <Box sx={{ flexGrow: 1 }}>
-            <Typography variant="body1" component="div" sx={{ marginTop: "10px" }}>
+            <Typography
+              variant="body1"
+              component="div"
+              sx={{ marginTop: "10px" }}
+            >
               <img src={logo} alt="Logo" style={{ height: "30px" }} />
             </Typography>
           </Box>
 
           {/* Desktop menu items */}
           {!isMobile && (
-            <Grid container alignItems="center" justifyContent="flex-end" gap={5}>
-              <Grid item sx={{ marginTop: "10px", marginRight:'40px' }}>
+            <Grid
+              container
+              alignItems="center"
+              justifyContent="flex-end"
+              gap={5}
+            >
+              <Grid item sx={{ marginTop: "10px", marginRight: "40px" }}>
                 <GroceryMenu />
               </Grid>
               <Grid item>
-                <Button variant="body1" sx={{ marginTop: "10px", textTransform:"capitalize"}}>Shops</Button>
+                <Button
+                  variant="body1"
+                  sx={{ marginTop: "10px", textTransform: "capitalize" }}
+                >
+                  Shops
+                </Button>
               </Grid>
               <Grid item>
-              <Button variant="body1" sx={{ marginTop: "10px", textTransform:"capitalize"}}>Offers</Button>
+                <Button
+                  variant="body1"
+                  sx={{ marginTop: "10px", textTransform: "capitalize" }}
+                >
+                  Offers
+                </Button>
               </Grid>
               <Grid item>
-              <Button variant="body1" sx={{ marginTop: "10px", textTransform:"capitalize"}}>Contact</Button>
+                <Button
+                  variant="body1"
+                  sx={{ marginTop: "10px", textTransform: "capitalize" }}
+                >
+                  Contact
+                </Button>
               </Grid>
               <Grid item>
                 <PagesMenu />
@@ -56,7 +95,13 @@ export default function Navbar() {
                 </Button>
               </Grid>
               <Grid item>
-                <Button sx={{ backgroundColor: "#009F7F", color: "white", textTransform: "capitalize" }}>
+                <Button
+                  sx={{
+                    backgroundColor: "#009F7F",
+                    color: "white",
+                    textTransform: "capitalize",
+                  }}
+                >
                   <RegisterModal />
                 </Button>
               </Grid>
@@ -91,26 +136,30 @@ export default function Navbar() {
           <ListItem button>
             <GroceryMenu />
           </ListItem>
-          <ListItem button>
+          <ListItem button sx={{marginLeft:'55px' }}>
             <ListItemText primary="Shops" />
           </ListItem>
-          <ListItem button>
+          <ListItem button sx={{marginLeft:'55px' }}>
             <ListItemText primary="Offers" />
           </ListItem>
-          <ListItem button>
+          <ListItem button sx={{marginLeft:'55px' }}>
             <ListItemText primary="Contact" />
           </ListItem>
           <ListItem button>
-            <Box>
-              <PagesMenu />
-            </Box>
+            <PagesMenu />
           </ListItem>
-          <ListItem button>
-            <Button sx={{ backgroundColor: "#009F7F", color: "white", textTransform: "capitalize" }}>
+          <ListItem button sx={{marginLeft:'15px' }}>
+            <Button
+              sx={{
+                backgroundColor: "#009F7F",
+                color: "white",
+                textTransform: "capitalize",
+              }}
+            >
               <RegisterModal />
             </Button>
           </ListItem>
-          <ListItem button>
+          <ListItem button sx={{marginLeft:'45px' }}>
             <Button sx={{ backgroundColor: "#009F7F" }}>
               <JoinModal />
             </Button>

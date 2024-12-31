@@ -136,19 +136,24 @@ export default function Navbar() {
           <ListItem button>
             <GroceryMenu />
           </ListItem>
-          <ListItem button sx={{marginLeft:'55px' }}>
+          <ListItem button sx={{ marginLeft: "55px" }}>
             <ListItemText primary="Shops" />
           </ListItem>
-          <ListItem button sx={{marginLeft:'55px' }}>
+          <ListItem button sx={{ marginLeft: "55px" }}>
             <ListItemText primary="Offers" />
           </ListItem>
-          <ListItem button sx={{marginLeft:'55px' }}>
+          <ListItem button sx={{ marginLeft: "55px" }}>
             <ListItemText primary="Contact" />
           </ListItem>
           <ListItem button>
             <PagesMenu />
           </ListItem>
-          <ListItem button sx={{marginLeft:'15px' }}>
+          <ListItem button sx={{ marginLeft: "45px" }}>
+            <Button sx={{ backgroundColor: "#009F7F" }}>
+              <JoinModal />
+            </Button>
+          </ListItem>
+          <ListItem button sx={{ marginLeft: "15px" }}>
             <Button
               sx={{
                 backgroundColor: "#009F7F",
@@ -157,11 +162,6 @@ export default function Navbar() {
               }}
             >
               <RegisterModal />
-            </Button>
-          </ListItem>
-          <ListItem button sx={{marginLeft:'45px' }}>
-            <Button sx={{ backgroundColor: "#009F7F" }}>
-              <JoinModal />
             </Button>
           </ListItem>
         </List>

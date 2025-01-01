@@ -1,3 +1,5 @@
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
 import imgLogo from '../Logo-new.webp';
 import {
@@ -12,13 +14,25 @@ import React, { useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 
 const LoginForm = () => {
-  const [showPassword, setShowPassword] = useState(false);
-  const { control, handleSubmit } = useForm({
+    const schema = yup.object({
+      name: yup.string().required("Name is required"),
+      email: yup.string().required("Email is required"),
+      password: yup.string().required("Password is required"),
+    });
+  const {
+    control,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
     defaultValues: {
+      name: "",
       email: "",
       password: "",
     },
+    resolver: yupResolver(schema),
   });
+
+  const [showPassword, setShowPassword] = useState(false);
   
   const onSubmit = (data) => console.log(data);
 
@@ -51,6 +65,7 @@ const LoginForm = () => {
               />
             )}
           />
+          <Typography variant="body1">{errors?.email?.message}</Typography>
         </Box>
 
         {/* Password Input */}
@@ -79,6 +94,7 @@ const LoginForm = () => {
               />
             )}
           />
+          <Typography variant="body1" sx={{color:"red"}}>{errors?.password?.message}</Typography>
         </Box>
 
         {/* Submit Button */}
